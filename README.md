@@ -1,11 +1,10 @@
 # AI MRI Analysis DICOM
  Slicing logic can be beneficial for preprocessing DICOM images, especially in medical imaging tasks where certain sections of the image may contain more relevant information than others. Here's a juniper notebook example on performing such processes.
 
-import pydicom
-import numpy as np
-from PIL import Image
+# import pydicom
+# import numpy as np from PIL import Image
 
-def preprocess_image(dicom_file):
+# def preprocess_image(dicom_file):
     # Read the DICOM file
     dicom_data = pydicom.dcmread(dicom_file)
     
@@ -20,14 +19,14 @@ def preprocess_image(dicom_file):
     
     return processed_image
 
-def slice_image(image, slice_position, slice_size):
+# def slice_image(image, slice_position, slice_size):
     # Slice the image around the specified position and size
     x_start, y_start = slice_position
     x_end, y_end = x_start + slice_size[0], y_start + slice_size[1]
     sliced_image = image[x_start:x_end, y_start:y_end]
     return sliced_image
 
-def resize_image(image, target_size):
+# def resize_image(image, target_size):
     # Resize the image to the target size
     img = Image.fromarray(image)
     resized_image = img.resize(target_size, resample=Image.BICUBIC)
