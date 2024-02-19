@@ -35,6 +35,6 @@ def resize_image(image, target_size):
     return resized_array
 
 # Example usage:
-# dicom_file = 'path/to/your/dicom/file.dcm'
-# processed_image = preprocess_image(dicom_file)
-# You can then further process the processed_image as needed for your application
+dicom_file = 'path/to/your/dicom/file.dcm'
+processed_image = preprocess_image(dicom_file)
+You can then further process the processed_image as needed for your application
